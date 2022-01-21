@@ -1,0 +1,17 @@
+name: Run Pluto tests
+
+on: [push, pull_request]
+
+jobs:
+  conftest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+
+      - name: Download Pluto
+        uses: FairwindsOps/pluto/github-action@master
+
+      - name: Use pluto
+        run: |
+          pluto detect-files -f versions.yaml tests/

@@ -1,0 +1,13 @@
+deprecated-versions:
+  - version: authorization.openshift.io
+    kind: ""
+    deprecated-in: v4.2
+    replacement-api: rbac.authorization.k8s.io/v1
+    component: ocp
+  - version: automationbroker.io/v1alpha1
+    kind: ""
+    deprecated-in: v4.2
+    removed-in: v4.3
+    component: ocp
+target-versions:
+  ocp: v4.9
